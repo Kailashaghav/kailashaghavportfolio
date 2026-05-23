@@ -95,7 +95,7 @@ export default function HeroSection() {
         style={{ opacity }}
         className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full pt-24"
       >
-        <div ref={parallaxRef} className="max-w-5xl">
+        <div ref={parallaxRef as any} className="max-w-5xl">
           {/* Badge */}
           <div className="hero-meta flex items-center gap-3 mb-8 opacity-0">
             <span className="flex gap-2 items-center">

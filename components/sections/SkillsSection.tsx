@@ -117,7 +117,7 @@ export default function SkillsSection() {
     <section id="skills" className="relative section-pad overflow-hidden bg-void">
       {/* BG glow blob */}
       <div
-        ref={parallax2}
+        ref={parallax2 as any}
         className="absolute top-1/2 right-0 w-[650px] h-[650px] rounded-full opacity-[0.04] pointer-events-none"
         style={{ background: "radial-gradient(circle, #ff4d1c 0%, transparent 70%)", transform: "translate(30%, -50%)" }}
       />

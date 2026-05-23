@@ -110,7 +110,7 @@ export default function ContactSection() {
 
         <div className="grid md:grid-cols-2 gap-20 items-start">
           {/* Left */}
-          <div ref={parallax}>
+          <div ref={parallax as any}>
             <div className="contact-el opacity-0">
               <h2 className="font-display text-[clamp(2.5rem,6vw,5.5rem)] leading-none text-ghost mb-6">
                 LET&apos;S<br />

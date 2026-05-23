@@ -74,7 +74,7 @@ export default function HeroSection() {
 
   return (
     <section
-      ref={sectionRef}
+      ref={sectionRef as any}
       id="home"
       className="relative min-h-screen flex items-center overflow-hidden bg-void"
     >

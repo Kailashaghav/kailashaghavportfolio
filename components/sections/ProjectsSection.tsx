@@ -58,7 +58,7 @@ function TiltCard({ project }: { project: Project }) {
 
   return (
     <motion.div
-      ref={cardRef}
+      ref={cardRef as any}
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => { setHovered(false); x.set(0); y.set(0); }}

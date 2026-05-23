@@ -15,7 +15,7 @@ function IcosahedronMesh() {
   });
   return (
     <Float speed={1.5} rotationIntensity={0.4} floatIntensity={0.8}>
-      <mesh ref={meshRef} castShadow>
+      <mesh ref={meshRef as any} castShadow>
         <icosahedronGeometry args={[1.8, 4]} />
         <MeshDistortMaterial
           color="#ff4d1c"
@@ -38,7 +38,7 @@ function WireFrame() {
     meshRef.current.rotation.y = state.clock.elapsedTime * 0.12;
   });
   return (
-    <mesh ref={meshRef}>
+    <mesh ref={meshRef as any}>
       <icosahedronGeometry args={[2.4, 1]} />
       <meshBasicMaterial color="#ff4d1c" wireframe opacity={0.07} transparent />
     </mesh>
@@ -76,7 +76,7 @@ function ParticleField() {
   });
 
   return (
-    <points ref={pointsRef}>
+    <points ref={pointsRef as any}>
       <bufferGeometry>
         <bufferAttribute attach="attributes-position" args={[positions, 3]} />
         <bufferAttribute attach="attributes-color" args={[colors, 3]} />
@@ -110,7 +110,7 @@ function RingOrbit({
     groupRef.current.rotation.x = tilt;
   });
   return (
-    <group ref={groupRef}>
+    <group ref={groupRef as any}>
       <mesh position={[radius, 0, 0]}>
         <sphereGeometry args={[0.07, 12, 12]} />
         <meshStandardMaterial
@@ -136,7 +136,7 @@ function Scene() {
     groupRef.current.rotation.x += (-mouse.y * 0.15 - groupRef.current.rotation.x) * 0.05;
   });
   return (
-    <group ref={groupRef}>
+    <group ref={groupRef as any}>
       <IcosahedronMesh />
       <WireFrame />
       <RingOrbit radius={3.2} speed={0.4}  tilt={0.3}  color="#00ffd1" />

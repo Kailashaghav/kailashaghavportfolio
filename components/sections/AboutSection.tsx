@@ -46,7 +46,7 @@ export default function AboutSection() {
   }, []);
 
   return (
-    <section id="about" ref={sectionRef} className="relative section-pad overflow-hidden bg-obsidian">
+    <section id="about" ref={sectionRef as any} className="relative section-pad overflow-hidden bg-obsidian">
       <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-ember/30 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12">

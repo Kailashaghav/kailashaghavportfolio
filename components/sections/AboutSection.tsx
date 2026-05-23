@@ -64,7 +64,7 @@ export default function AboutSection() {
 
         <div className="grid md:grid-cols-2 gap-16 items-center">
           {/* Text */}
-          <div ref={textParallax}>
+          <div ref={textParallax as any}>
             <h2 className="about-line font-display text-[clamp(2.8rem,7vw,6rem)] leading-none text-ghost mb-8">
               DATA<br />
               <span className="text-ember">MEETS</span><br />

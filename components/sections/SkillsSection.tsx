@@ -136,7 +136,7 @@ export default function SkillsSection() {
         </motion.div>
 
         {/* Headline */}
-        <div ref={parallax1} className="mb-16">
+        <div ref={parallax1 as any} className="mb-16">
           <h2 className="font-display text-[clamp(2.5rem,6vw,5rem)] leading-none text-ghost">
             CRAFT &amp;<br />
             <span className="text-ember">EXPERTISE</span>

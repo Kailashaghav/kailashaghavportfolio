@@ -97,7 +97,7 @@ export default function ExperienceSection() {
 
         <div className="grid md:grid-cols-5 gap-16">
           {/* Headline */}
-          <div ref={parallax} className="md:col-span-2">
+          <div ref={parallax as any} className="md:col-span-2">
             <h2 className="font-display text-[clamp(2.5rem,5vw,4.5rem)] leading-none text-ghost sticky top-32">
               CAREER<br />
               <span className="text-ember">JOURNEY</span>

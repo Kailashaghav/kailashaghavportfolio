@@ -1,19 +1,20 @@
-import { NextRequest, NextResponse } from "next/server";
-import { connectDB } from "@/lib/db";
-import Contact from "@/models/Contact";
+import { NextResponse } from 'next/server';
 
-export async function POST(req: NextRequest) {
+export async function POST(request: Request) {
   try {
-    const body = await req.json();
-    const { name, email, message } = body;
-    if (!name || !email || !message) {
-      return NextResponse.json({ success: false, error: "All fields are required." }, { status: 400 });
+    const body = await request.json();
+    
+    // 1. Validate the body (common cause of 500s)
+    if (!body.email || !body.message) {
+      return NextResponse.json({ error: "Missing fields" }, { status: 400 });
     }
-    await connectDB();
-    const contact = await Contact.create({ name, email, message });
-    return NextResponse.json({ success: true, message: "Message saved successfully!", id: contact._id }, { status: 201 });
+
+    // 2. Wrap external logic (like Nodemailer or Database) in this try block
+    // await sendEmail(body); 
+
+    return NextResponse.json({ message: "Success" }, { status: 200 });
   } catch (error) {
-    console.error("Contact API error:", error);
-    return NextResponse.json({ success: false, error: "Internal server error. Please try again." }, { status: 500 });
+    console.error("API Error:", error); // This shows up in your terminal
+    return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
   }
 }

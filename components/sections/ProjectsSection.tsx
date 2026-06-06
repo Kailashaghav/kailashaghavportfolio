@@ -217,7 +217,7 @@ export default function ProjectsSection() {
 
         <div className="grid md:grid-cols-5 gap-16 mb-20">
           <div ref={parallax as any} className="md:col-span-2 flex flex-col justify-start">
-            <h2 className="font-display text-[clamp(2.5rem,5.5vw,5rem)] leading-none text-ghost sticky top-32">
+            <h2 className="font-display text-[clamp(2.5rem,5.5vw,5rem)] leading-none text-ghost sticky top-50">
               SELECTED<br />
               <span className="text-ember">WORK</span>
             </h2>

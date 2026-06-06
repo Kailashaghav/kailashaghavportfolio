@@ -14,28 +14,80 @@ const PROJECTS: Project[] = [
   {
     id: "p1",
     num: "001",
-    title: "MOVIE RECOMMENDER",
-    subtitle: "Machine Learning · NLP · Content-Based Filtering",
-    tags: ["Python", "Pandas", "NumPy", "Scikit-learn", "Streamlit", "TMDB API", "NLP", "Pickle"],
-    year: "2024",
+    title: "SENTIMENTLENS PRO",
+    subtitle: "AI · NLP · Real-Time Sentiment Analysis · Full-Stack",
+    tags: ["Python", "FastAPI", "Scikit-learn", "NLP", "Chart.js", "JavaScript", "Speech API"],
+    year: "2025",
     color: "#ff4d1c",
     description:
-      "Content-based movie recommendation engine using NLP and cosine similarity. CountVectorizer for text vectorisation across genres, keywords, cast and overview. Built interactive Streamlit UI with real-time TMDB poster fetch and Pickle-based model serialisation for fast deployment.",
-    link: "https://github.com/Kailashaghav/MOVIE-RECOMMENDATION-SYSTEM.git",
-    github: "https://github.com/Kailashaghav/MOVIE-RECOMMENDATION-SYSTEM.git",
+      "Full-stack AI dashboard performing real-time sentiment analysis with 92% accuracy. Users input text manually or via voice using the Speech Recognition API. Features interactive Chart.js visualisations, geolocation tracking, and a FastAPI backend with Scikit-learn NLP pipeline under 200ms response time.",
+    link: "https://sentiment-frontend-ashen-three.vercel.app/",
+    github: "https://github.com/Kailashaghav",
   },
   {
     id: "p2",
     num: "002",
+    title: "SMART AGRICULTURE APP",
+    subtitle: "AI · CNN · TensorFlow · Mobile · Multi-Language",
+    tags: ["Python", "Kivy", "TensorFlow", "CNN", "OpenWeatherMap", "pyttsx3", "MobileNetV2"],
+    year: "2024",
+    color: "#4ade80",
+    description:
+      "Mobile app using CNN with MobileNetV2 transfer learning to detect 38+ plant diseases at 95% accuracy. Integrates real-time weather insights, ML-based crop recommendations across 15 soil-season combinations, 8 government scheme guides, and multi-language TTS in English, Hindi, and Marathi.",
+    link: "https://github.com/Kailashaghav",
+    github: "https://github.com/Kailashaghav",
+  },
+  {
+    id: "p3",
+    num: "003",
     title: "CUSTOMER ANALYTICS",
     subtitle: "Data Analysis · Power BI · Business Intelligence",
-    tags: ["Python", "SQL", "Power BI", "EDA", "Pandas", "Data Cleaning", "Visualisation"],
+    tags: ["Python", "SQL", "Power BI", "EDA", "Pandas", "RFM Analysis", "Data Cleaning"],
     year: "2024",
     color: "#00ffd1",
     description:
-      "End-to-end analytics pipeline processing large-scale customer transaction records. Reduced data inconsistencies through cleaning, built Power BI dashboards tracking sales trends, customer segments and KPIs, and identified the top 20% customers driving majority revenue via Pareto analysis.",
+      "End-to-end analytics pipeline processing 500K+ customer transaction records. Built 5+ interactive Power BI dashboards for KPI monitoring, RFM segmentation, and revenue forecasting. Identified top 20% customers driving 80% of revenue via Pareto analysis, reducing data prep time by 35%.",
     link: "https://github.com/Kailashaghav/customer_behavior_analysis.git",
     github: "https://github.com/Kailashaghav/customer_behavior_analysis.git",
+  },
+  {
+    id: "p4",
+    num: "004",
+    title: "FACE RECOGNITION ATTENDANCE",
+    subtitle: "Computer Vision · Machine Learning · Automation",
+    tags: ["Python", "OpenCV", "Scikit-learn", "KNN", "Streamlit", "Pandas", "pyttsx3"],
+    year: "2024",
+    color: "#a78bfa",
+    description:
+      "Real-time AI-powered attendance system using KNN classifier and Haar Cascade face detection. Automatically marks attendance with timestamps, prevents duplicate entries, includes voice feedback, and provides a live Streamlit dashboard for monitoring records.",
+    link: "https://github.com/Kailashaghav",
+    github: "https://github.com/Kailashaghav",
+  },
+  {
+    id: "p5",
+    num: "005",
+    title: "SHOW EV DASHBOARD",
+    subtitle: "Data Analytics · Tableau · Business Intelligence",
+    tags: ["Tableau", "Python", "Pandas", "CSV", "Data Visualisation", "KPI", "Kaggle"],
+    year: "2024",
+    color: "#38bdf8",
+    description:
+      "Interactive Tableau dashboard analysing 150K+ Electric Vehicle records across the US. Tracks EV adoption trends by model year, state-wise distribution, top manufacturers, BEV vs PHEV market share, and CAFV eligibility using area charts, map visuals, treemaps, and donut charts.",
+    link: "https://github.com/Kailashaghav",
+    github: "https://github.com/Kailashaghav",
+  },
+  {
+    id: "p6",
+    num: "006",
+    title: "MOVIE RECOMMENDER",
+    subtitle: "Machine Learning · NLP · Content-Based Filtering",
+    tags: ["Python", "Pandas", "NumPy", "Scikit-learn", "Streamlit", "TMDB API", "NLP"],
+    year: "2024",
+    color: "#f472b6",
+    description:
+      "Content-based movie recommendation engine using NLP and cosine similarity. CountVectorizer for text vectorisation across genres, keywords, cast and overview. Built interactive Streamlit UI with real-time TMDB poster fetch and Pickle-based model serialisation for fast deployment.",
+    link: "https://github.com/Kailashaghav/MOVIE-RECOMMENDATION-SYSTEM.git",
+    github: "https://github.com/Kailashaghav/MOVIE-RECOMMENDATION-SYSTEM.git",
   },
 ];
 
@@ -45,15 +97,15 @@ function TiltCard({ project }: { project: Project }) {
   const y = useMotionValue(0);
   const springX = useSpring(x, { stiffness: 150, damping: 20 });
   const springY = useSpring(y, { stiffness: 150, damping: 20 });
-  const rotateX  = useTransform(springY, [-0.5, 0.5], [8, -8]);
-  const rotateY  = useTransform(springX, [-0.5, 0.5], [-8, 8]);
+  const rotateX = useTransform(springY, [-0.5, 0.5], [8, -8]);
+  const rotateY = useTransform(springX, [-0.5, 0.5], [-8, 8]);
   const [hovered, setHovered] = useState(false);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!cardRef.current) return;
     const rect = cardRef.current.getBoundingClientRect();
-    x.set(((e.clientX - rect.left) / rect.width - 0.5));
-    y.set(((e.clientY - rect.top)  / rect.height - 0.5));
+    x.set((e.clientX - rect.left) / rect.width - 0.5);
+    y.set((e.clientY - rect.top) / rect.height - 0.5);
   };
 
   return (
@@ -65,16 +117,12 @@ function TiltCard({ project }: { project: Project }) {
       style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
       className="project-card relative p-8 border border-white/5 bg-obsidian/40 backdrop-blur-sm hover:border-white/10 transition-all duration-500 cursor-default"
     >
-      {/* Glow on hover */}
       <motion.div
         animate={{ opacity: hovered ? 1 : 0 }}
-        className="absolute inset-0 pointer-events-none rounded-none"
-        style={{
-          background: `radial-gradient(circle at 50% 0%, ${project.color}15 0%, transparent 60%)`,
-        }}
+        className="absolute inset-0 pointer-events-none"
+        style={{ background: `radial-gradient(circle at 50% 0%, ${project.color}15 0%, transparent 60%)` }}
       />
 
-      {/* Header row */}
       <div className="flex items-start justify-between mb-6" style={{ transform: "translateZ(20px)" }}>
         <div>
           <span className="font-mono text-xs tracking-widest text-muted">{project.year}</span>
@@ -89,12 +137,10 @@ function TiltCard({ project }: { project: Project }) {
         <span className="font-display text-5xl text-white/5">{project.num}</span>
       </div>
 
-      {/* Description */}
       <p className="font-body text-muted text-sm leading-relaxed mb-6" style={{ transform: "translateZ(10px)" }}>
         {project.description}
       </p>
 
-      {/* Tags */}
       <div className="flex flex-wrap gap-2 mb-8" style={{ transform: "translateZ(15px)" }}>
         {project.tags.map((tag) => (
           <span
@@ -107,7 +153,6 @@ function TiltCard({ project }: { project: Project }) {
         ))}
       </div>
 
-      {/* Links */}
       <div className="flex gap-4" style={{ transform: "translateZ(20px)" }}>
         <motion.a
           href={project.github}
@@ -121,6 +166,20 @@ function TiltCard({ project }: { project: Project }) {
           <span className="w-4 h-px group-hover:w-8 transition-all duration-300" style={{ background: project.color }} />
           <span>↗</span>
         </motion.a>
+        {project.id === "p1" && (
+          <motion.a
+            href={project.link}
+            target="_blank"
+            rel="noreferrer"
+            whileHover={{ x: 4 }}
+            className="flex items-center gap-2 font-mono text-xs tracking-widest uppercase group"
+            style={{ color: project.color }}
+          >
+            <span>Live Demo</span>
+            <span className="w-4 h-px group-hover:w-8 transition-all duration-300" style={{ background: project.color }} />
+            <span>↗</span>
+          </motion.a>
+        )}
       </div>
     </motion.div>
   );
@@ -142,11 +201,9 @@ export default function ProjectsSection() {
 
   return (
     <section id="projects" className="relative section-pad overflow-hidden bg-obsidian">
-      {/* Accent */}
       <div className="absolute right-0 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-aurora/25 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        {/* Label */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -159,7 +216,6 @@ export default function ProjectsSection() {
         </motion.div>
 
         <div className="grid md:grid-cols-5 gap-16 mb-20">
-          {/* Headline */}
           <div ref={parallax as any} className="md:col-span-2 flex flex-col justify-start">
             <h2 className="font-display text-[clamp(2.5rem,5.5vw,5rem)] leading-none text-ghost sticky top-32">
               SELECTED<br />
@@ -181,7 +237,6 @@ export default function ProjectsSection() {
             </motion.a>
           </div>
 
-          {/* Cards */}
           <div className="md:col-span-3 flex flex-col gap-8">
             {PROJECTS.map((project) => (
               <TiltCard key={project.id} project={project} />

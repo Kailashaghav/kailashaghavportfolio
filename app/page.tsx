@@ -26,7 +26,6 @@ export default function Home() {
         <ProjectsSection />
         <ExperienceSection />
         <CertificationsSection />
-        <CertificationsSection />
       </main>
       <Footer />
     </SmoothScroll>

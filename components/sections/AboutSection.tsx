@@ -13,7 +13,7 @@ gsap.registerPlugin(ScrollTrigger);
 const AboutCanvas = dynamic(() => import("@/components/3d/AboutCanvas"), { ssr: false });
 
 const FACTS = [
-  { label: "Location",  value: "Nagpur / CHH. Nagar, IN" },
+  { label: "Location",  value: "CHH. Nagar, IN" },
   { label: "Degree",    value: "B.Tech Data Science" },
   { label: "Minor",     value: "AR & VR" },
   { label: "CGPA",      value: "8.0 / 10" },

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kailashaghavportfolio.vercel.app/sitemap.xml

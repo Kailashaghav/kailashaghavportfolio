@@ -12,6 +12,19 @@ gsap.registerPlugin(ScrollTrigger);
 
 const PROJECTS: Project[] = [
   {
+    id: "p0",
+    num: "000",
+    title: "RESEARCHFORGE AI",
+    subtitle: "Multi-Agent AI · LangGraph · Groq LLM · Agentic Pipeline",
+    tags: ["Python", "LangGraph", "Groq LLM", "Tavily", "Streamlit", "LangChain", "BeautifulSoup"],
+    year: "2025",
+    color: "#818cf8",
+    description: "Production-ready Multi-Agent Research Pipeline with 4 specialized AI agents — Search, Reader, Writer, Critic — working in sequence to produce publication-ready reports. Built with LangGraph, Groq LLM and Tavily web search with a deep-space 3D glassmorphic Streamlit UI.",
+    link: "https://researchforge-ai-vznhiyfu45vgpu8fguaa68.streamlit.app/",
+    github: "https://github.com/Kailashaghav/researchforge-ai",
+  },
+
+  {
     id: "p1",
     num: "001",
     title: "SENTIMENTLENS PRO",

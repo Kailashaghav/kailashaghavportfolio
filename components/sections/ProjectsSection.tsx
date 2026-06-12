@@ -179,7 +179,7 @@ function TiltCard({ project }: { project: Project }) {
           <span className="w-4 h-px group-hover:w-8 transition-all duration-300" style={{ background: project.color }} />
           <span>↗</span>
         </motion.a>
-        {project.id === "p1" && (
+        {project.id === "p0" || project.id === "p1" && (
           <motion.a
             href={project.link}
             target="_blank"

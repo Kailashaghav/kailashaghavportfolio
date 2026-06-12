@@ -12,18 +12,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const PROJECTS: Project[] = [
   {
-    id: "p0",
-    num: "000",
-    title: "RESEARCHFORGE AI",
-    subtitle: "Multi-Agent AI · LangGraph · LLM · Agentic Pipeline",
-    tags: ["Python", "LangGraph", "Groq LLM", "Tavily", "Streamlit", "LangChain", "BeautifulSoup"],
-    year: "2025",
-    color: "#818cf8",
-    description: "Production-ready Multi-Agent Research Pipeline with 4 specialized AI agents working in sequence — Search, Reader, Writer, Critic — to produce publication-ready reports. Built with LangGraph, Groq LLM (llama-3.3-70b), and Tavily web search with a deep-space 3D glassmorphic Streamlit UI.",
-    link: "https://researchforge-ai-vznhiyfu45vgpu8fguaa68.streamlit.app/",
-    github: "https://github.com/Kailashaghav/researchforge-ai",
-  },
-
     id: "p1",
     num: "001",
     title: "SENTIMENTLENS PRO",
@@ -36,7 +24,7 @@ const PROJECTS: Project[] = [
     link: "https://sentiment-frontend-ashen-three.vercel.app/",
     github: "https://github.com/Kailashaghav",
   },
-
+  {
     id: "p2",
     num: "002",
     title: "SMART AGRICULTURE APP",
@@ -49,7 +37,7 @@ const PROJECTS: Project[] = [
     link: "https://github.com/Kailashaghav",
     github: "https://github.com/Kailashaghav",
   },
-
+  {
     id: "p3",
     num: "003",
     title: "CUSTOMER ANALYTICS",
@@ -62,7 +50,7 @@ const PROJECTS: Project[] = [
     link: "https://github.com/Kailashaghav/customer_behavior_analysis.git",
     github: "https://github.com/Kailashaghav/customer_behavior_analysis.git",
   },
-
+  {
     id: "p4",
     num: "004",
     title: "FACE RECOGNITION ATTENDANCE",
@@ -75,7 +63,7 @@ const PROJECTS: Project[] = [
     link: "https://github.com/Kailashaghav",
     github: "https://github.com/Kailashaghav",
   },
-
+  {
     id: "p5",
     num: "005",
     title: "SHOW EV DASHBOARD",
@@ -88,7 +76,7 @@ const PROJECTS: Project[] = [
     link: "https://github.com/Kailashaghav",
     github: "https://github.com/Kailashaghav",
   },
-
+  {
     id: "p6",
     num: "006",
     title: "MOVIE RECOMMENDER",
@@ -204,7 +192,7 @@ export default function ProjectsSection() {
     gsap.fromTo(
       ".project-card",
       { y: 80, opacity: 0 },
-    
+      {
         y: 0, opacity: 1, duration: 1, stagger: 0.2, ease: "power3.out",
         scrollTrigger: { trigger: "#projects", start: "top 70%" },
       }
@@ -229,7 +217,7 @@ export default function ProjectsSection() {
 
         <div className="grid md:grid-cols-5 gap-16 mb-20">
           <div ref={parallax as any} className="md:col-span-2 flex flex-col justify-start">
-            <h2 className="font-display text-[clamp(2.5rem,5.5vw,5rem)] leading-none text-ghost sticky top-50">
+            <h2 className="font-display text-[clamp(2.5rem,5.5vw,5rem)] leading-none text-ghost sticky top-32">
               SELECTED<br />
               <span className="text-ember">WORK</span>
             </h2>

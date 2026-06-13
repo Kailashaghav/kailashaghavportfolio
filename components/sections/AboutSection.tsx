@@ -28,11 +28,14 @@ const PHOTOS = [
   "/images/photo1.jpg",
   "/images/photo2.jpg",
   "/images/photo3.jpg",
+  "/images/photo4.jpg",
+  "/images/photo5.jpg",
+  "/images/photo6.jpg",
 ];
 
 function PhotoSlideshow() {
   const [current, setCurrent] = useState(0);
-  const COLORS = ['#ff4d1c', '#00ffd1', '#7c3aed'];
+  const COLORS = ['#ff4d1c', '#00ffd1', '#7c3aed', '#38bdf8', '#f472b6', '#4ade80'];
   useEffect(() => {
     const timer = setInterval(() => setCurrent((p) => (p + 1) % PHOTOS.length), 3000);
     return () => clearInterval(timer);

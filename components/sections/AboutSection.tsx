@@ -32,20 +32,32 @@ const PHOTOS = [
 
 function PhotoSlideshow() {
   const [current, setCurrent] = useState(0);
+  const COLORS = ['#ff4d1c', '#00ffd1', '#7c3aed'];
   useEffect(() => {
     const timer = setInterval(() => setCurrent((p) => (p + 1) % PHOTOS.length), 3000);
     return () => clearInterval(timer);
   }, []);
   return (
     <div className="relative w-full h-full">
+      {/* Neon border glow */}
+      <div className="absolute inset-0 z-10 pointer-events-none transition-all duration-1000" style={{ boxShadow: `inset 0 0 30px ${COLORS[current]}40, 0 0 40px ${COLORS[current]}30` }} />
+      {/* Corner accents */}
+      <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 z-20 transition-all duration-1000" style={{ borderColor: COLORS[current] }} />
+      <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 z-20 transition-all duration-1000" style={{ borderColor: COLORS[current] }} />
+      <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 z-20 transition-all duration-1000" style={{ borderColor: COLORS[current] }} />
+      <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 z-20 transition-all duration-1000" style={{ borderColor: COLORS[current] }} />
+      {/* Photos */}
       {PHOTOS.map((src, i) => (
-        <div key={i} className="absolute inset-0 transition-opacity duration-1000" style={{ opacity: i === current ? 1 : 0 }}>
+        <div key={i} className="absolute inset-0 transition-all duration-1000" style={{ opacity: i === current ? 1 : 0, transform: i === current ? 'scale(1)' : 'scale(1.05)' }}>
           <Image src={src} alt="Kailash Aghav" fill className="object-cover object-top" />
+          {/* Overlay gradient */}
+          <div className="absolute inset-0" style={{ background: `linear-gradient(to top, ${COLORS[i]}20 0%, transparent 50%)` }} />
         </div>
       ))}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+      {/* Dots */}
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-3 z-20">
         {PHOTOS.map((_, i) => (
-          <button key={i} onClick={() => setCurrent(i)} className="w-2 h-2 rounded-full transition-all duration-300" style={{ background: i === current ? '#ff4d1c' : 'rgba(255,255,255,0.4)' }} />
+          <button key={i} onClick={() => setCurrent(i)} className="transition-all duration-300" style={{ width: i === current ? '24px' : '8px', height: '8px', borderRadius: '4px', background: i === current ? COLORS[i] : 'rgba(255,255,255,0.3)', boxShadow: i === current ? `0 0 10px ${COLORS[i]}` : 'none' }} />
         ))}
       </div>
     </div>

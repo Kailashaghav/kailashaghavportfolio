@@ -155,7 +155,7 @@ export default function AboutSection() {
 
           
           <div ref={canvasParallax as any} className="relative h-[500px] overflow-hidden">
-            <AboutCanvas />
+            
             <div className="absolute top-4 right-4 w-16 h-16 border-t border-r border-ember/30 pointer-events-none" />
             <div className="absolute bottom-4 left-4 w-16 h-16 border-b border-l border-ember/30 pointer-events-none" />
           </div>

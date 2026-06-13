@@ -66,6 +66,19 @@ export default function Navbar() {
           >
             Hire Me
           </motion.a>
+
+          {/* Theme Toggle */}
+          <button
+            onClick={() => {
+              const html = document.documentElement;
+              html.classList.toggle('dark');
+              localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+            }}
+            className="w-9 h-9 flex items-center justify-center border border-white/10 hover:border-ember/50 transition-all duration-300 text-muted hover:text-ember"
+            aria-label="Toggle theme"
+          >
+            <span className="text-sm">☀️</span>
+          </button>
         </nav>
 
         {/* Mobile hamburger */}

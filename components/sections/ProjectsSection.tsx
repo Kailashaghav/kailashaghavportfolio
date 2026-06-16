@@ -92,6 +92,18 @@ const PROJECTS: Project[] = [
     link: "https://github.com/Kailashaghav/MOVIE-RECOMMENDATION-SYSTEM.git",
     github: "https://github.com/Kailashaghav/MOVIE-RECOMMENDATION-SYSTEM.git",
   },
+  {
+    id: "p7",
+    num: "007",
+    title: "SOCIAL FEED APP",
+    subtitle: "Full-Stack · React · Node.js · MongoDB · REST API",
+    tags: ["React", "Vite", "Node.js", "Express", "MongoDB", "Mongoose", "React Router"],
+    year: "2025",
+    color: "#fbbf24",
+    description: "Full-stack social feed platform where users create posts with text and images, browsing them in a live shared feed. Built with a React Vite frontend and Node.js Express MongoDB REST API backend. Deployed across two platforms — frontend on Vercel, backend on Render.",
+    link: "https://my-fullstack-app-six-mu.vercel.app/",
+    github: "https://github.com/Kailashaghav",
+  },
 ];
 function TiltCard({ project }: { project: Project }) {
   const cardRef = useRef<HTMLDivElement>(null);

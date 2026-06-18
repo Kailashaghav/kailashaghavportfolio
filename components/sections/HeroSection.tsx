@@ -105,7 +105,7 @@ export default function HeroSection() {
               </span>
             </span>
             <span className="text-muted">—</span>
-            <span className="font-mono text-xs tracking-widest text-muted">2025</span>
+            <span className="font-mono text-xs tracking-widest text-muted">2027</span>
           </div>
 
           {/* Name */}
@@ -141,9 +141,9 @@ export default function HeroSection() {
           <div className="overflow-hidden max-w-xl">
             <p className="hero-meta opacity-0 font-body text-muted text-lg leading-relaxed">
               Building intelligent systems at the intersection of{" "}
-              <span className="text-ghost">data science</span>,{" "}
-              <span className="text-ghost">machine learning</span> and{" "}
-              <span className="text-ghost">immersive web engineering</span>.
+              <span className="text-ghost">Data Science</span>,{" "}
+              <span className="text-ghost">Machine Learning</span> and{" "}
+              <span className="text-ghost">Full-Stack Development</span>.
               Turning raw data into extraordinary experiences.
             </p>
           </div>
@@ -183,9 +183,9 @@ export default function HeroSection() {
           <div className="hero-meta opacity-0 flex gap-12 mt-16 border-t border-white/5 pt-8">
             {[
               { num: "8.0", label: "CGPA" },
-              { num: "2+",  label: "ML Projects" },
-              { num: "10+", label: "Tech Stacks" },
-              { num: "2025", label: "Graduating" },
+              
+              
+              { num: "2027", label: "Graduating" },
             ].map((stat) => (
               <div key={stat.label}>
                 <div className="font-display text-4xl text-ember">{stat.num}</div>

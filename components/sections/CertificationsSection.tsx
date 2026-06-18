@@ -16,6 +16,7 @@ const CERTIFICATES = [
   { id: "c10", title: "Foundations of Prompt Engineering", issuer: "AWS Training & Certification", date: "Jun 2026", image: "/certificates/cert_aws_prompt-1.jpg", color: "#f97316", link: "https://skillbuilder.aws/learn/VF6H4SZ1BU/foundations-of-prompt-engineering/7U8XFUVXDT", icon: "🔧" },
   { id: "c11", title: "Amazon ElastiCache Getting Started", issuer: "AWS Training & Certification", date: "Jun 2026", image: "/certificates/cert_aws_elasticache-1.jpg", color: "#ff9900", link: "", icon: "🗃️" },
   { id: "c12", title: "Digital Marketing Certified", issuer: "HubSpot Academy", date: "Jun 2026", image: "/certificates/cert_hubspot_digital.jpg", color: "#ff7a59", link: "https://academy.hubspot.com/courses/digital-marketing", icon: "📊" },
+  { id: "c14", title: "Data Analytics Job Simulation", issuer: "Deloitte · Forage", date: "Jun 2026", image: "/certificates/cert_deloitte-1.jpg", color: "#86BC25", link: "https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_S77hbCd35TgRfe9fn_1781822015401_completion_certificate.pdf", icon: "📈" },
   { id: "c13", title: "TechSprint Hackathon — Google Developer Group", issuer: "MGM University · Hack2Skill", date: "2025-26", image: "/certificates/cert_google_hackathon.jpg", color: "#4285f4", link: "", icon: "🏆" },
 ];
 

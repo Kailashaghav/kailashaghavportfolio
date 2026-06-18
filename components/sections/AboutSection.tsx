@@ -19,8 +19,6 @@ const FACTS = [
   { label: "Degree",    value: "B.Tech Data Science" },
   { label: "Minor",     value: "AR & VR" },
   { label: "CGPA",      value: "8.0 / 10" },
-  { label: "Stack",     value: "React · Python · Three.js" },
-  { label: "Status",    value: "Open to Opportunities ✓" },
 ];
 
 

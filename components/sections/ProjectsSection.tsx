@@ -89,7 +89,7 @@ const PROJECTS: Project[] = [
     year: "2024",
     color: "#f472b6",
     description: "Content-based movie recommendation engine using NLP and cosine similarity. CountVectorizer for text vectorisation across genres, keywords, cast and overview. Built interactive Streamlit UI with real-time TMDB poster fetch and Pickle-based model serialisation for fast deployment.",
-    link: "https://github.com/Kailashaghav/MOVIE-RECOMMENDATION-SYSTEM.git",
+    link: "https://movie-recommendation-system-brhbjfnl9bai7sptgbmued.streamlit.app/",
     github: "https://github.com/Kailashaghav/MOVIE-RECOMMENDATION-SYSTEM.git",
   },
   {
@@ -172,7 +172,7 @@ function TiltCard({ project }: { project: Project }) {
           <span className="w-4 h-px group-hover:w-8 transition-all duration-300" style={{ background: project.color }} />
           <span>↗</span>
         </motion.a>
-        {(project.id === "p0" || project.id === "p1" || project.id === "p7" || project.id === "p8") && (
+        {(project.id === "p0" || project.id === "p1" || project.id === "p6" || project.id === "p7" || project.id === "p8") && (
           <motion.a href={project.link} target="_blank" rel="noreferrer" whileHover={{ x: 4 }} className="flex items-center gap-2 font-mono text-xs tracking-widest uppercase group" style={{ color: project.color }}>
             <span>Live Demo</span>
             <span className="w-4 h-px group-hover:w-8 transition-all duration-300" style={{ background: project.color }} />

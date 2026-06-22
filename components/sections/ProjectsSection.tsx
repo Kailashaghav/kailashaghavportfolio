@@ -93,6 +93,18 @@ const PROJECTS: Project[] = [
     github: "https://github.com/Kailashaghav/MOVIE-RECOMMENDATION-SYSTEM.git",
   },
   {
+    id: "p8",
+    num: "008",
+    title: "AI CYBERSECURITY DASHBOARD",
+    subtitle: "SOC · ML · FastAPI · React · MongoDB · WebSocket",
+    tags: ["Python", "FastAPI", "React", "PyTorch", "scikit-learn", "MongoDB", "WebSocket", "Three.js"],
+    year: "2026",
+    color: "#00ffd1",
+    description: "Real-time AI-powered SOC dashboard detecting network intrusions, phishing emails, and threat patterns. RandomForest + Autoencoder trained on NSL-KDD (83% accuracy), TF-IDF phishing detector at 99% F1-score, 3D Force-directed network graph, Trie-based IP blocklist at O(k) lookup, WebSocket real-time alerts with MongoDB persistence.",
+    link: "https://cyber-soc-dashboard.vercel.app",
+    github: "https://github.com/Kailashaghav/cyber-soc-dashboard",
+  },
+  {
     id: "p7",
     num: "007",
     title: "SOCIAL FEED APP",
@@ -160,7 +172,7 @@ function TiltCard({ project }: { project: Project }) {
           <span className="w-4 h-px group-hover:w-8 transition-all duration-300" style={{ background: project.color }} />
           <span>↗</span>
         </motion.a>
-        {(project.id === "p0" || project.id === "p1" || project.id === "p7") && (
+        {(project.id === "p0" || project.id === "p1" || project.id === "p7" || project.id === "p8") && (
           <motion.a href={project.link} target="_blank" rel="noreferrer" whileHover={{ x: 4 }} className="flex items-center gap-2 font-mono text-xs tracking-widest uppercase group" style={{ color: project.color }}>
             <span>Live Demo</span>
             <span className="w-4 h-px group-hover:w-8 transition-all duration-300" style={{ background: project.color }} />

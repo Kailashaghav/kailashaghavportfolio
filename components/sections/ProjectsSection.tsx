@@ -93,8 +93,8 @@ const PROJECTS: Project[] = [
     github: "https://github.com/Kailashaghav/MOVIE-RECOMMENDATION-SYSTEM.git",
   },
   {
-    id: "p8",
-    num: "008",
+    id: "p7",
+    num: "007",
     title: "AI CYBERSECURITY DASHBOARD",
     subtitle: "SOC · ML · FastAPI · React · MongoDB · WebSocket",
     tags: ["Python", "FastAPI", "React", "PyTorch", "scikit-learn", "MongoDB", "WebSocket", "Three.js"],
@@ -105,8 +105,8 @@ const PROJECTS: Project[] = [
     github: "https://github.com/Kailashaghav/cyber-soc-dashboard",
   },
   {
-    id: "p7",
-    num: "007",
+    id: "p8",
+    num: "008",
     title: "SOCIAL FEED APP",
     subtitle: "Full-Stack · React · Node.js · MongoDB · REST API",
     tags: ["React", "Vite", "Node.js", "Express", "MongoDB", "Mongoose", "React Router"],

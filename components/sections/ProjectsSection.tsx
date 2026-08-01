@@ -93,6 +93,18 @@ const PROJECTS: Project[] = [
     github: "https://github.com/Kailashaghav/MOVIE-RECOMMENDATION-SYSTEM.git",
   },
   {
+    id: "p9",
+    num: "009",
+    title: "RAMS CRAFTCORNER",
+    subtitle: "E-Commerce · Full-Stack · AI Chatbot · Razorpay",
+    tags: ["React", "Node.js", "Express", "MySQL", "Razorpay", "Groq AI", "Cloudinary", "Redux"],
+    year: "2026",
+    color: "#f97316",
+    description: "Production-ready full-stack e-commerce platform for customized gift boxes. Features a 10-step custom gift builder, AI chatbot (Aria) powered by Groq Llama 3.3 70B with live product context, Razorpay payments, JWT auth with OTP verification, Cloudinary image uploads, and a full admin dashboard with revenue analytics.",
+    link: "https://rams-craftcorner.vercel.app",
+    github: "https://github.com/Kailashaghav/rams-craftcorner",
+  },
+  {
     id: "p7",
     num: "007",
     title: "AI CYBERSECURITY DASHBOARD",
@@ -172,7 +184,7 @@ function TiltCard({ project }: { project: Project }) {
           <span className="w-4 h-px group-hover:w-8 transition-all duration-300" style={{ background: project.color }} />
           <span>↗</span>
         </motion.a>
-        {(project.id === "p0" || project.id === "p1" || project.id === "p6" || project.id === "p7" || project.id === "p8") && (
+        {(project.id === "p0" || project.id === "p1" || project.id === "p6" || project.id === "p7" || project.id === "p8" || project.id === "p9") && (
           <motion.a href={project.link} target="_blank" rel="noreferrer" whileHover={{ x: 4 }} className="flex items-center gap-2 font-mono text-xs tracking-widest uppercase group" style={{ color: project.color }}>
             <span>Live Demo</span>
             <span className="w-4 h-px group-hover:w-8 transition-all duration-300" style={{ background: project.color }} />

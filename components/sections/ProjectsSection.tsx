@@ -93,6 +93,18 @@ const PROJECTS: Project[] = [
     github: "https://github.com/Kailashaghav/MOVIE-RECOMMENDATION-SYSTEM.git",
   },
   {
+    id: "p10",
+    num: "010",
+    title: "MOOD BASED AI CHATBOT",
+    subtitle: "AI · LangChain · Groq LLM · Streamlit · NLP",
+    tags: ["Python", "Streamlit", "LangChain", "Groq LLM", "NLP", "python-dotenv"],
+    year: "2026",
+    color: "#c084fc",
+    description: "AI chatbot with 3 switchable personalities — Angry, Funny, and Sad — powered by Groq LLM via LangChain. Features conversation memory (last 10 messages), 3D-styled animated UI with custom CSS, auto-reset on mood switch, and friendly error handling for rate limits and API issues.",
+    link: "https://moodchatbot-htwtijgxkuvenrxcmt5zhl.streamlit.app/",
+    github: "https://github.com/Kailashaghav/mood_chatbot",
+  },
+  {
     id: "p9",
     num: "009",
     title: "RAMS CRAFTCORNER",
@@ -184,7 +196,7 @@ function TiltCard({ project }: { project: Project }) {
           <span className="w-4 h-px group-hover:w-8 transition-all duration-300" style={{ background: project.color }} />
           <span>↗</span>
         </motion.a>
-        {(project.id === "p0" || project.id === "p1" || project.id === "p6" || project.id === "p7" || project.id === "p8" || project.id === "p9") && (
+        {(project.id === "p0" || project.id === "p1" || project.id === "p6" || project.id === "p7" || project.id === "p8" || project.id === "p9" || project.id === "p10") && (
           <motion.a href={project.link} target="_blank" rel="noreferrer" whileHover={{ x: 4 }} className="flex items-center gap-2 font-mono text-xs tracking-widest uppercase group" style={{ color: project.color }}>
             <span>Live Demo</span>
             <span className="w-4 h-px group-hover:w-8 transition-all duration-300" style={{ background: project.color }} />

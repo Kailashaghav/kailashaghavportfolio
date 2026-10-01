@@ -93,8 +93,20 @@ const PROJECTS: Project[] = [
     github: "https://github.com/Kailashaghav/MOVIE-RECOMMENDATION-SYSTEM.git",
   },
   {
-    id: "p10",
-    num: "010",
+    id: "p11",
+    num: "011",
+    title: "COGNILEARN",
+    subtitle: "Cognitive AI · MediaPipe · FastAPI · React · Emotion Detection",
+    tags: ["Python", "FastAPI", "React", "MediaPipe", "DistilBERT", "Vite", "Transformers"],
+    year: "2026",
+    color: "#34d399",
+    description: "Emotion-aware adaptive study companion that watches attention and emotion through webcam using MediaPipe FaceLandmarker. Detects engaged, confused, bored, happy states with explainable AI. Features real-time attention scoring, rolling focus timeline, text sentiment analysis, and a FastAPI perception module. Video never leaves the browser.",
+    link: "https://cognilearn-psi.vercel.app/",
+    github: "https://github.com/Kailashaghav",
+  },
+  {
+    id: "p7",
+    num: "07",
     title: "MOOD BASED AI CHATBOT",
     subtitle: "AI · LangChain · Groq LLM · Streamlit · NLP",
     tags: ["Python", "Streamlit", "LangChain", "Groq LLM", "NLP", "python-dotenv"],
@@ -105,8 +117,8 @@ const PROJECTS: Project[] = [
     github: "https://github.com/Kailashaghav/mood_chatbot",
   },
   {
-    id: "p9",
-    num: "009",
+    id: "p8",
+    num: "008",
     title: "RAMS CRAFTCORNER",
     subtitle: "E-Commerce · Full-Stack · AI Chatbot · Razorpay",
     tags: ["React", "Node.js", "Express", "MySQL", "Razorpay", "Groq AI", "Cloudinary", "Redux"],
@@ -117,8 +129,8 @@ const PROJECTS: Project[] = [
     github: "https://github.com/Kailashaghav/rams-craftcorner",
   },
   {
-    id: "p7",
-    num: "007",
+    id: "p9",
+    num: "009",
     title: "AI CYBERSECURITY DASHBOARD",
     subtitle: "SOC · ML · FastAPI · React · MongoDB · WebSocket",
     tags: ["Python", "FastAPI", "React", "PyTorch", "scikit-learn", "MongoDB", "WebSocket", "Three.js"],
@@ -129,8 +141,8 @@ const PROJECTS: Project[] = [
     github: "https://github.com/Kailashaghav/cyber-soc-dashboard",
   },
   {
-    id: "p8",
-    num: "008",
+    id: "p10",
+    num: "010",
     title: "SOCIAL FEED APP",
     subtitle: "Full-Stack · React · Node.js · MongoDB · REST API",
     tags: ["React", "Vite", "Node.js", "Express", "MongoDB", "Mongoose", "React Router"],
@@ -196,7 +208,7 @@ function TiltCard({ project }: { project: Project }) {
           <span className="w-4 h-px group-hover:w-8 transition-all duration-300" style={{ background: project.color }} />
           <span>↗</span>
         </motion.a>
-        {(project.id === "p0" || project.id === "p1" || project.id === "p6" || project.id === "p7" || project.id === "p8" || project.id === "p9" || project.id === "p10") && (
+        {(project.id === "p0" || project.id === "p1" || project.id === "p6" || project.id === "p7" || project.id === "p8" || project.id === "p9" || project.id === "p10" || project.id === "p11") && (
           <motion.a href={project.link} target="_blank" rel="noreferrer" whileHover={{ x: 4 }} className="flex items-center gap-2 font-mono text-xs tracking-widest uppercase group" style={{ color: project.color }}>
             <span>Live Demo</span>
             <span className="w-4 h-px group-hover:w-8 transition-all duration-300" style={{ background: project.color }} />

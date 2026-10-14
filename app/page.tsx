@@ -28,7 +28,6 @@ export default function Home() {
         <ExperienceSection />
         <CertificationsSection />
         <DownloadsSection />
-        <DownloadsSection />
         <ContactSection />
       </main>
       <Footer />

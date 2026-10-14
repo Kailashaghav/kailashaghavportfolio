@@ -8,6 +8,7 @@ import SkillsSection from "@/components/sections/SkillsSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
 import ExperienceSection from "@/components/sections/ExperienceSection";
 import CertificationsSection from "@/components/sections/CertificationsSection";
+import DownloadsSection from "@/components/sections/DownloadsSection";
 import ContactSection from "@/components/sections/ContactSection";
 import Footer from "@/components/ui/Footer";
 import SmoothScroll from "@/components/ui/SmoothScroll";
@@ -26,6 +27,7 @@ export default function Home() {
         <ProjectsSection />
         <ExperienceSection />
         <CertificationsSection />
+        <DownloadsSection />
         <ContactSection />
       </main>
       <Footer />
